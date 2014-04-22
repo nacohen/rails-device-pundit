@@ -9,7 +9,8 @@ feature 'Home Page:' do
 #   Given I am a visitor
 #   When I visit the home page
 #   Then I should see "Home"
-  scenario 'Visit the Home Page', js: true do
+# => Add js: true after "visit the home page" to enable javascript testing in Firefox
+  scenario 'Visit the Home Page' do
     visit root_path
     expect(page).to have_content 'Home'
   end
