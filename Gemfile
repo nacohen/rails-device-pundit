@@ -34,3 +34,7 @@ group :test do
   gem 'email_spec'
   gem 'faker'
 end
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
