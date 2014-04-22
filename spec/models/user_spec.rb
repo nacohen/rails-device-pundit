@@ -13,7 +13,7 @@ describe User do
   #testing instance method
   it "#email returns a string" do
     user=FactoryGirl.create(:user)
-    expect(user.email).to match 'user@example.com'
+    expect(user.email).to match(/\w+@\w+\.\w+/)
   end
 
   #testing validation
