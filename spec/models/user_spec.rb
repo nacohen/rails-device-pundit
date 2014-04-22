@@ -2,28 +2,34 @@ require 'spec_helper'
 
 describe User do
 
-  before(:each) { @user = User.new(email: 'user@example.com', password: '12345678') }
 
-  subject { @user }
 
-  it { should be_valid }
+  it "should respond to email" do
+    user=FactoryGirl.create(:user)
+    expect(user).to respond_to(:email)
+  end
 
-  it { should respond_to(:email)}
 
   #testing instance method
   it "#email returns a string" do
-    expect(@user.email).to match 'user@example.com'
+    user=FactoryGirl.create(:user)
+    expect(user.email).to match 'user@example.com'
   end
 
   #testing validation
-  describe "when email is blank" do
-    before { @user.email = " " }
-    it { should_not be_valid }
+  it "should be valid" do
+    user=FactoryGirl.build(:user)
+    expect(user).to be_valid
+  end
+
+  it "should be invalid with a blank email address" do
+    user=FactoryGirl.build(:user, email: nil)
+    expect(user).to_not be_valid
   end
 
   #testing class method
   it ".all returns a list of users" do
-    @user.save
+    user=FactoryGirl.create(:user)
     expect(User.all.count).not_to eq 0
   end
 
