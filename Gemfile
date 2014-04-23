@@ -34,6 +34,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'email_spec'
   gem 'faker'
+  gem 'shoulda-matchers', require: false
 end
 group :production do
   gem 'pg'
