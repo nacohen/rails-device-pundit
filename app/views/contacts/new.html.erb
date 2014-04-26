@@ -1,7 +1,9 @@
 <% content_for :title do %>Contact<% end %>
-<h3>Contact</h3>
-<div class="form">
+
+<div class="authform">
+
   <%= simple_form_for @contact do |form| %>
+  <h3>Send us a message</h3>
     <%= form.error_notification %>
     <%= form.input :name, autofocus: true %>
     <%= form.input :email %>
