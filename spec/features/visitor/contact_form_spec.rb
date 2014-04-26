@@ -4,7 +4,7 @@ require 'spec_helper'
 #   As a visitor
 #   I want to visit a Contact page to fill out a form with my name, email address and some text
 #   So I can send a message to the owner of the Web site
-feature 'Contact:' do
+feature 'Contact Page:' do
 # Scenario: Visit the Contact Page
 #   Given I am a visitor
 #   When I visit the Contact page
