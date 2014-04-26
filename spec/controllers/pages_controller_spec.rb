@@ -3,7 +3,7 @@ require 'shoulda/matchers'
 
 # spec/controllers/pages_controller_spec.rb
 describe HighVoltage::PagesController, '#show' do
-  %w(about).each do |page|
+  %w(about contact).each do |page|
     context 'on GET to /#{page}' do
       before do
         get :show, id: page
