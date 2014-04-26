@@ -15,6 +15,8 @@
 @mixin twelve-columns {
   @extend .small-12;
   @extend .columns;
+  font-size: rem-calc(18);
+  line-height: rem-calc(24);
   }
 @mixin six-columns-centered {
   @extend .small-6;
